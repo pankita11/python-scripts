@@ -7,7 +7,7 @@
 
 
 def pair_sum(arr, k):
-    pairs = set()       # Set and not list as it would allow only unique pairs
+    pairs = set()  # Set and not list as it would allow only unique pairs
     for i, val in enumerate(arr):
         # print(i, val)
         for j in arr[i + 1:]:
@@ -19,17 +19,16 @@ def pair_sum(arr, k):
                 continue
     return pairs
 
-def pair_sum2(arr, k):
 
+def pair_sum2(arr, k):
     pairs = set()
 
     for i in arr:
-        diff = k-i
+        diff = k - i
         if diff in arr:
             pairs.add((min(i, diff), max(i, diff)))
 
     return pairs
-
 
 
 if __name__ == '__main__':
